@@ -16,7 +16,7 @@ app.get('/', function(req, res){
    
    
    
-   res.end('{"ipaddress":"' + ip + '","language":"' + language[0] + '","software":"' + software.match(regexp)[1] + '"}');
+   res.end(JSON.stringify( { ipaddress: ip, language: language[0], software: software.match(regexp)[1] } ));
 });
 
 
